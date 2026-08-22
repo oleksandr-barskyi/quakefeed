@@ -12,6 +12,24 @@ npx expo start
 
 Open it in Expo Go, an emulator, or the browser with `w`.
 
+## Screens
+
+| Feed | Offline | Event |
+| --- | --- | --- |
+| ![Feed](assets/screenshots/feed.png) | ![Offline](assets/screenshots/offline.png) | ![Event](assets/screenshots/detail.png) |
+| Live USGS data, filters and sort above the list | Network pulled mid-session: the list stays, the banner explains why | Full record for one event, with a link out to USGS |
+
+The middle one is the screenshot worth looking at. The network was cut while the
+app was open and the feed was refreshed anyway. Nothing was thrown away and
+nothing was hidden: the cached list is still on screen and the banner says
+exactly how old it is.
+
+![Strongest events, magnitude 4.5 and above](assets/screenshots/filters.png)
+
+Magnitude threshold `M4.5+` over a week, sorted by `Strongest`. Filtering and
+sorting are pure functions over an array, which is why they are covered by tests
+rather than by clicking around.
+
 ## What this project demonstrates
 
 This is a portfolio project, so the interesting parts are deliberate.
