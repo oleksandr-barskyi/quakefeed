@@ -115,9 +115,9 @@ lookup that succeeds once the feed has been fetched, and one that 404s.
 This is pinned to NestJS 11 (`^11.2.5`), not the newer 12.x line. NestJS 12
 ships as ESM-only (`"type": "module"` in `@nestjs/common`'s own
 `package.json`), which `ts-jest` on CommonJS cannot `require()` directly.
-Rather than rewire the whole toolchain to ESM under a tonight deadline, this
-pins to the last CommonJS-era major, which is still a fully current, real
-NestJS release with the same decorators, DI and module system.
+Rather than rewire the whole toolchain to ESM for this, it pins to the last
+CommonJS-era major, which is still a fully current, real NestJS release with
+the same decorators, DI and module system.
 
 `npm audit` reports a `multer` advisory pulled in transitively through
 `@nestjs/platform-express`. It is about crafted multipart form-data uploads;
