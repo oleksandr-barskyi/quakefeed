@@ -5,5 +5,5 @@
     "types": ["jest", "node"]
   },
   "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
-  "exclude": ["node_modules", ".trash"]
+  "exclude": ["node_modules", ".trash", "backend"]
 }

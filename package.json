@@ -19,7 +19,8 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/.trash/"
+      "/.trash/",
+      "/backend/"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@react-native-async-storage/.*|react-native-reanimated|react-native-worklets|native-base|react-native-svg)"
