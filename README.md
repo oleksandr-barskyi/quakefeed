@@ -80,6 +80,13 @@ Data flows one way. `useFeedController` owns fetching and caching and exposes a
 read-only state object. `FeedProvider` derives the visible list from that state
 plus the current query. Screens render what they are given and call back up.
 
+## Optional backend
+
+`backend/` is a small NestJS service that can sit in front of the same USGS
+feed: server-side caching with a TTL and a WebSocket that pushes batched
+live updates instead of the app polling USGS on its own. It is entirely
+optional, additive, and off by default, see `backend/README.md`.
+
 ## Parsing untrusted data
 
 The USGS feed is public and occasionally incomplete: `mag` and `place` can be
